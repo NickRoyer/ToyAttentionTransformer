@@ -8,7 +8,7 @@ I highly recommend you follow along on the videos here: https://www.youtube.com/
 
 and further invetigate the models / architectures here: https://github.com/huggingface/transformers/tree/v4.48.2/src/transformers
 
-In the mean time I hope this notebook ( https://github.com/NickRoyer/ToyAttentionTransformer/blob/main/TrainingLoop.ipynb) can help you visualize a simple transformer training loop
+In the mean time I hope this notebook (https://github.com/NickRoyer/ToyAttentionTransformer/blob/main/TrainingLoop.ipynb) can help you visualize a simple transformer training loop
 
 The main logic is split:
 ModelDetails => Contains the details of how the model is created including an attention architecture
