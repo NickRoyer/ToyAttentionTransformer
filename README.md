@@ -1,19 +1,42 @@
-This is a sample pytorch implementation of an attention transformer for an LLM. This sample is adapted from the work provided here: https://github.com/karpathy/nanoGPT. 
+# Toy Attention Transformer (PyTorch Implementation)
 
-For performance optimzation and added complexity see the original work, this is intended to show a simplified training loop that is accessible via the notebook.
+This is a **sample PyTorch implementation** of an **attention-based transformer** for a **large language model (LLM)**. This example is adapted from the excellent work found here:  
+🔗 **[nanoGPT by Karpathy](https://github.com/karpathy/nanoGPT)**  
 
-The main test case here is 1 -> 4 letter words. The model is intended to learn the different words available and predict the next character in the word sequence. For purposes of keeping this simple the vocabulary of the input has been reduced to 10 characters and the nonce char (space in this case)
+For **performance optimizations** and **additional complexity**, refer to the original work. This implementation is **designed to demonstrate a simplified training loop** that is accessible via the provided Jupyter Notebook.
 
-I highly recommend you follow along on the videos here: https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ
+---
 
-and further invetigate the models / architectures here: https://github.com/huggingface/transformers/tree/v4.48.2/src/transformers
+## Overview
 
-In the mean time I hope this notebook (https://github.com/NickRoyer/ToyAttentionTransformer/blob/main/TrainingLoop.ipynb) can help you visualize a simple transformer training loop
+The primary test case here involves **1 to 4-letter words**. The model is designed to **learn the available words** and **predict the next character in a word sequence**.  
 
-The main logic is split:
-ModelDetails => Contains the details of how the model is created including an attention architecture
-Model => the bones of the model 
-Trainer => impleentation of a simple training loop
-config => standard configuration
+To **keep the implementation simple**, the input vocabulary has been **limited to 10 characters** plus a **nonce character (space in this case)**.
 
-NOTE: There are two main samples provided: the "toy" example which shows a 1 -> 4 letter word completion and a more complex example of trying to complete the shakespeare text.
+For a **deeper understanding**, I highly recommend following along with this **video series**:  
+🎥 **[YouTube - Transformer Models](https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ)**  
+
+Additionally, you can **explore more models and architectures** here:  
+🔗 **[Hugging Face Transformers (v4.48.2)](https://github.com/huggingface/transformers/tree/v4.48.2/src/transformers)**  
+
+---
+
+## How to Use
+
+In the meantime, I hope this **notebook** helps you visualize a **simple transformer training loop**:  
+📌 **[TrainingLoop.ipynb](https://github.com/NickRoyer/ToyAttentionTransformer/blob/main/TrainingLoop.ipynb)**  
+
+The **main logic is split** into the following components:  
+
+- **`ModelDetails`** → Contains details on how the model is built, including its attention architecture.  
+- **`Model`** → The core structure (backbone) of the transformer model.  
+- **`Trainer`** → Implements a **simple training loop**.  
+- **`config`** → Standard model and training configurations.  
+
+---
+
+## Samples Provided
+
+This repository includes **two main examples**:  
+1️⃣ **"Toy" Example** → Demonstrates **1 to 4-letter word completion**.  
+2️⃣ **Shakespeare Completion** → A more complex example attempting to complete Shakespearean text.  
