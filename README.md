@@ -11,7 +11,7 @@ and further invetigate the models / architectures here: https://github.com/huggi
 In the mean time I hope this notebook can help you visualize a simple transformer training loop
 
 The main logic is split:
-ModeDetails => Contains the details of how the model is created including an attention architecture
+ModelDetails => Contains the details of how the model is created including an attention architecture
 Model => the bones of the model 
 Trainer => impleentation of a simple training loop
 config => standard configuration
