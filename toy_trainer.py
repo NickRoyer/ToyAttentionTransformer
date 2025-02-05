@@ -20,10 +20,13 @@ class ToyTrainer(nn.Module):
     def get_single_batch(self):
         return self.data.get_batch(batch_size=1, block_size=self.config.block_size, isTraining=False) # fetch the very first batch
 
-    def TrainingLoop( self, batch_size: int, max_iters : int, log_interval: int = 0 ):
-        X, Y = self.data.get_batch(batch_size=batch_size, block_size=self.config.block_size, isTraining=True) # fetch the very first batch
+    def TrainingLoop( self, batch_size: int, max_iters : int, log_interval: int = 0, lr: float = 0. ):
         t0 = time.time()
         iter_num = 0 # number of iterations in the lifetime of this process
+
+        if(lr > 0 ):
+            for param_group in self.optimizer.param_groups:
+                param_group['lr'] = lr
 
         while True:        
             X, Y = self.data.get_batch(batch_size=batch_size, block_size=self.config.block_size, isTraining=True)
